@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Avaliação</title>
+</h:head>
+<h:body >
+
+	<h:form>
+		<p:growl id="msgs" showDetail="true" />
+		<h1>Contas a pagar</h1>
+
+
+		<br></br>
+
+		<h:panelGrid columns="2" cellpadding="5" >
+			<p:outputLabel value="Descrição:" for="descricao" >
+			<p:autoComplete id="descricao" value="#{avaliacao.descricao}"
+				completeMethod="#{avaliacao.descricao}" style="margin-left:100px;" />
+			</p:outputLabel>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			
+			<p:outputLabel value="Tipo de doc:" for="tp_doc">
+				<p:autoComplete id="tp_doc" dropdown="true"
+					value="#{avaliacao.tp_doc}"
+					completeMethod="#{avaliacao.tp_doc}" style="margin-left:86px;" />
+			</p:outputLabel>
+			<br></br>
+			<br></br>
+			<br></br>
+
+
+			<p:outputLabel for="dt_vencimento" value="Data de vencimento:" >
+			<p:calendar id="dt_vencimento" value="#{avaliacao.dt_vencimento3}" showOn="button" style="margin-left:23px;"/>
+			</p:outputLabel>
+			<br></br>
+			<br></br>
+			<br></br>
+			
+			<p:outputLabel value="Situação" for="situacao" >
+			<p:autoComplete id="situacao" dropdown="true"
+				value="#{avaliacao.situacao}"
+				completeMethod="#{avaliacao.situacao}" style="margin-left:115px;" />
+			</p:outputLabel>
+			<br></br>
+			
+			<br></br>
+			<br></br>
+			</h:panelGrid>
+			<p:button  value="Novo" icon="pi pi-save"
+				style="margin-right:20px;" />
+			<p:button value="Cadastrar" icon="pi pi-star"
+				style="margin-right:20px;" />
+			<p:button value="Atualizar" icon="pi pi-star"
+				style="margin-right:20px;" />
+			<p:button value="Excluir" icon="pi pi-star"
+				style="margin-right:20px;" />
+
+
+		
+	</h:form>
+</h:body>
+</html>
